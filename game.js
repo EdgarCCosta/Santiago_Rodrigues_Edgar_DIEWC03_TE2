@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const moverIntervaloBala = setInterval(moverBalas, 16); 
 
   // Mover enemigos a intervalos regulares
-  const moverIntervaloEnemigos = setInterval(moverEnemigos, 1);
+  const moverIntervaloEnemigos = setInterval(moverEnemigos, 50);
 
   // Actualizar contadores a intervalos regulares
   const updateIntervaloInfo = setInterval(updateInfo, 1000); 
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Función para destruir un enemigo
   function destroiEnemigo(enemigo) {
     areaJuego.removeChild(enemigo);
-    enemigos.splice(enemigos.indexOf(enemigo), 1);
+    enemigos.splice(enemigos.indexOf(enemigo), 50);
   }
 
   // Función para verificar la colisión entre enemigo y jugador
