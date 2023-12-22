@@ -30,11 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
     areaJuego.appendChild(enemigo);
     enemigos.push(enemigo);
 
-    // Calculate position based on rows and columns
+    
     const linea = Math.floor(i / enemigosPorLinea);
     const columna = i % enemigosPorLinea;
-    const enemigoPositionX = columna * 30; // Adjust spacing as needed
-    const enemigoPositionY = linea * 30; // Adjust spacing as needed
+    const enemigoPositionX = columna * 30; 
+    const enemigoPositionY = linea * 30; 
 
     enemigo.style.left = enemigoPositionX + "px";
     enemigo.style.top = enemigoPositionY + "px";
@@ -46,13 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Mover balas a intervalos regulares
-  const moverIntervaloBala = setInterval(moverBalas, 16); // 16ms is approximately 60 frames per second
+  const moverIntervaloBala = setInterval(moverBalas, 16); 
 
   // Mover enemigos a intervalos regulares
-  const moverIntervaloEnemigos = setInterval(moverEnemigos, 50);
+  const moverIntervaloEnemigos = setInterval(moverEnemigos, 1);
 
   // Actualizar contadores a intervalos regulares
-  const updateIntervaloInfo = setInterval(updateInfo, 1000); // Update every second
+  const updateIntervaloInfo = setInterval(updateInfo, 1000); 
 
   // Función para manejar eventos de teclado
   function handleKeyPress(event) {
