@@ -1,0 +1,123 @@
+body.login {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+
+
+body.juego {
+    margin: 0;
+    overflow: hidden;
+}
+
+#contenedor-juego {
+    position: relative;
+    text-align: center;
+}
+
+#area-dejego {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    border: 5px solid mediumpurple;
+    background: url('juegobkg.jpg') center center / cover no-repeat;
+}
+
+#jugador {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #00f;
+    border: 1px solid white;
+    bottom: 10px;
+    left: 185px;
+}
+
+.enemigo {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: purple;
+    border-radius: 50%;
+    top: 10px;
+    left: 185px;
+}
+
+.bala {
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    background-color: yellow;
+    left: 0;
+    bottom: 0;
+    margin-left: -2.5px;
+}
+
+#contenedor-juego #info {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-family: 'Arial', sans-serif;
+    z-index: 1;
+    width: 100%;
+    margin-top: -40px; /* Ajusta el valor según sea necesario */
+}
+
+#game-result {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-family: 'Arial', sans-serif;
+    z-index: 1;
+}
+
+#you-win {
+    color: green;
+    -webkit-text-stroke: 1px greenyellow;
+    font-size: 36px;
+    font-weight: bolder;
+    position: absolute;
+    margin-top: 1%;
+    left: 50%; /* Centrar horizontalmente */
+    top: 100%; /* Colocar en la parte superior (puedes ajustar el valor según sea necesario) */
+    transform: translate(-50%, 0); /* Ajustar para centrar correctamente */
+  }
+
+  #you-lose {
+    color: firebrick;
+    -webkit-text-stroke: coral 1px;
+    font-size: 36px;
+    font-weight: bolder;
+    position: absolute;
+    margin-top: 1%;
+    left: 50%; /* Centrar horizontalmente */
+    top: 100%; /* Colocar en la parte superior (puedes ajustar el valor según sea necesario) */
+    transform: translate(-50%, 0); /* Ajustar para centrar correctamente */
+  }
+  
+p{
+    text-align: center;
+}
+
+

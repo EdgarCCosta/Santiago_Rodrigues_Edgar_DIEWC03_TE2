@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Space Invaders</title>
+</head>
+<body class="juego.body">
+    <div id="contenedor-juego">
+        <div id="info">
+            <p>Tiempo: <span id="tiempo">0</span>s</p>
+            <p>Enemigos Destruidos: <span id="enemigos-destruidos">0</span></p>
+            <div id="game-result"></div>
+            <div id="you-win"></div> <!-- Nuevo elemento para "YOU WIN" -->
+            <div id="you-lose"></div> <!-- Nuevo elemento para "YOU LOSE" -->
+        </div>
+        <div id="area-dejego">
+            <div id="jugador"></div>
+            <div id="contenedor-debalas"></div>
+        </div>
+    </div>
+    <p> &#8592;  izquierda | &#8594;  derecha | &#8593;  disparar</p>
+    <script src="/game.js"></script>
+</body>
+</html>
