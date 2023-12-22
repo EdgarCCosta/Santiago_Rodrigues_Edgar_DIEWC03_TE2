@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Función para restablecer el color original de un enemigo
   function resetenemigoColor(enemigo) {
-    // Restaurar el color original del enemigo después de 500ms
+    
     setTimeout(() => {
       enemigo.style.backgroundColor = "purple"; // Puedes ajustar el color original según sea necesario
     }, 500);
@@ -249,51 +249,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     balas.push(bala);
   }
-
-  function resetGame() {
-    // Restablecer valores iniciales y eliminar elementos adicionales
-    tempoInicial = new Date().getTime();
-    contadorenemigosDestruidos = 0;
-    posicaoJugador = 185;
-
-    for (let bala of balas) {
-        contenedorBalas.removeChild(bala);
-    }
-    balas.length = 0;
-
-    for (let enemigo of enemigos) {
-        areaJuego.removeChild(enemigo);
-    }
-    enemigos.length = 0;
-
-    // Volver a crear enemigos
-    for (let i = 0; i < numeroEnemigos; i++) {
-        const enemigo = document.createElement("div");
-        enemigo.className = "enemigo";
-        areaJuego.appendChild(enemigo);
-        enemigos.push(enemigo);
-
-        // Calcular posición basada en filas y columnas
-        const linea = Math.floor(i / enemigosPorLinea);
-        const columna = i % enemigosPorLinea;
-        const enemigoPositionX = columna * 30; // Ajustar espaciado según sea necesario
-        const enemigoPositionY = linea * 30; // Ajustar espaciado según sea necesario
-
-        enemigo.style.left = enemigoPositionX + "px";
-        enemigo.style.top = enemigoPositionY + "px";
-    }
-
-    // Restablecer estilos y clases
-    document.getElementById("you-win").classList.remove("win");
-    document.getElementById("you-win").innerText = "";
-    document.getElementById("you-lose").classList.remove("game-over");
-    document.getElementById("you-lose").innerText = "";
-
-    // Reiniciar intervalos de movimiento y actualización
-    moverIntervaloEnemigos = setInterval(moverEnemigos, 50);
-    moverIntervaloBala = setInterval(moverBalas, 16);
-    updateIntervaloInfo = setInterval(updateInfo, 1000);
-}
-
 
 });
